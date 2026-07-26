@@ -1,7 +1,10 @@
 # Imports
 
 import cv2
-import mediapipe as mp
+try:
+    import mediapipe as mp
+except ImportError:
+    mp = None  # type: ignore
 import pyautogui
 import math
 from enum import IntEnum
